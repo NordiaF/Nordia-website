@@ -10,6 +10,7 @@ import whiteHeart from "@/asset/icons/whiteHeart.svg";
 import moneyStand from "@/asset/icons/moneyStand.svg";
 import whiteCalender from "@/asset/icons/whiteCalender.svg";
 import ActionTiles from "@/components/actionTiles";
+import headingBg from "@/asset/images/headingBg.png";
 
 const HomeScreen = () => {
   const visionMission = [
@@ -86,36 +87,16 @@ const HomeScreen = () => {
     },
   ];
 
-  const supportItems = [
-    {
-      label: "Volunteer With Us",
-      href: "/volunteer",
-      Icon: whiteHeart,
-      variant: "primary",
-    },
-    {
-      label: "Donate Now",
-      href: "/donate",
-      Icon: moneyStand,
-      variant: "accent",
-    },
-    {
-      label: "Attend An Outreach",
-      href: "/outreach",
-      Icon: whiteCalender,
-      variant: "primary",
-    },
-  ];
   return (
     <div>
-      <div className="relative md:h-[600px] h-40 w-full">
-        <Image fill src={heroImage} alt="hero image" />
-        <div className="">
-          <Typography.H1 className="absolute bottom-0 p-5 text-white md:text-[88px] leading-tight">
-            Empowering Minds. <br /> Illuminating Truth. <br /> Transforming
-            Communities.
-          </Typography.H1>
-        </div>
+      <div
+        className="w-full md:h-[600px] h-40 bg-cover bg-center flex items-end"
+        style={{ backgroundImage: `url(${heroImage.src})` }}
+      >
+        <Typography.H1 className="p-5 text-white md:text-[88px] leading-tight">
+          Empowering Minds. <br /> Illuminating Truth. <br /> Transforming
+          Communities.
+        </Typography.H1>
       </div>
       <div className="bg-primary p-10 w-full mt-10">
         <Typography.Text className="text-white md:text-[18px]">
@@ -143,7 +124,10 @@ const HomeScreen = () => {
           />
         ))}
       </div>
-      <div className="bg-primary p-10 w-full flex flex-col items-center mt-10 space-y-3">
+      <div
+        className="bg-primary p-10 w-full bg-cover flex flex-col items-center mt-10 space-y-3"
+        style={{ backgroundImage: `url(${headingBg.src})` }}
+      >
         <Typography.H1 className="text-white text-center">
           Why We Exist
         </Typography.H1>
