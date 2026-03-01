@@ -16,7 +16,7 @@ export type ActionTilesProps = {
 
 export default function ActionTiles({ items, className }: ActionTilesProps) {
   return (
-    <section className={cn("w-full py-6", className)}>
+    <section className={cn("w-full py-16", className)}>
       <div className="mx-auto max-w-6xl px-6">
         <div className="grid grid-cols-1 overflow-hidden rounded md:grid-cols-3">
           {items.map((item) => {

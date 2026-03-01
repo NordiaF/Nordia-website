@@ -82,7 +82,7 @@ export default function CompassPoints({
           <div className="mt-8 flex justify-center">
             <PrimaryButton
               href={ctaHref}
-              className="w-[55%] rounded bg-[#F6BA63] px-10"
+              className="w-full sm:w-[55%] rounded bg-[#F6BA63] px-10"
             >
               {ctaText}
             </PrimaryButton>

@@ -18,7 +18,7 @@ const HomeScreen = () => {
       title: "Our Vision",
       body: (
         <>
-          <Typography.BigText>
+          <Typography.BigText className="sm:text-[22px]">
             “To see a society where truth is popular and misinformation is
             combated” <br />
             <br /> Through transformative education and evidence-based
@@ -36,7 +36,7 @@ const HomeScreen = () => {
       title: "Our Mission",
       body: (
         <>
-          <Typography.BigText>
+          <Typography.BigText className="sm:text-[22px]">
             “To organize initiatives across education, health, finance, and
             energy that will inform, transform, and have a sustained impact.”{" "}
             <br />
@@ -90,10 +90,10 @@ const HomeScreen = () => {
   return (
     <div>
       <div
-        className="w-full md:h-[600px] h-40 bg-cover bg-center flex items-end"
+        className="w-full md:h-[600px] h-60 bg-cover bg-center flex items-end"
         style={{ backgroundImage: `url(${heroImage.src})` }}
       >
-        <Typography.H1 className="p-5 text-white md:text-[88px] leading-tight">
+        <Typography.H1 className="p-5 text-white md:text-[88px] text-[24px] leading-tight">
           Empowering Minds. <br /> Illuminating Truth. <br /> Transforming
           Communities.
         </Typography.H1>
@@ -105,7 +105,7 @@ const HomeScreen = () => {
           with truth-driven education, awareness, and critical thinking that
           inspire lasting change.
         </Typography.Text>
-        <div className="pt-5 flex items-center space-x-5">
+        <div className="pt-5 sm:flex items-center space-x-5 space-y-5 sm:space-y-0">
           <PrimaryButton href="/about">Learn About Us</PrimaryButton>
           <PrimaryButton href="/support">Support Our Work</PrimaryButton>
         </div>
