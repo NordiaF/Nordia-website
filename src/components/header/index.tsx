@@ -9,15 +9,16 @@ const navLinks = [
   { label: "Home", href: "/" },
   { label: "About us", href: "/about" },
   { label: "What We Do", href: "/what-we-do" },
-  { label: "Media", href: "/media" },
+  { label: "Media", href: "/events-and-outreaches" },
   { label: "Contact", href: "/contact" },
+  { label: "Blog", href: "/blog" },
 ];
 
 const Header = () => {
   const [open, setOpen] = useState(false);
 
   return (
-    <header className="w-full bg-white">
+    <header className="relative w-full bg-white">
       <nav className="mx-auto flex h-[84px] max-w-7xl items-center justify-between px-6">
         {/* Logo */}
         <Link href="/" className="flex items-center gap-2">
@@ -69,7 +70,7 @@ const Header = () => {
 
       {/* Mobile dropdown */}
       {open && (
-        <div className="md:hidden border-t bg-white">
+        <div className="absolute left-0 right-0 top-full z-50 md:hidden border-t border-gray-100 bg-white shadow-lg">
           <div className="mx-auto max-w-7xl px-6 py-4 flex flex-col gap-3">
             {navLinks.map((item) => (
               <Link

@@ -25,7 +25,7 @@ export default function SplitSection({
   const paragraphs = Array.isArray(body) ? body : [body];
 
   return (
-    <section className="w-full py-20">
+    <section className="w-full sm:py-20 py-10">
       <div className="mx-auto max-w-7xl px-6">
         <div
           className={`grid items-center gap-12 md:grid-cols-2 ${
