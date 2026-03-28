@@ -399,6 +399,7 @@ const AboutScreen = () => {
             ),
             variant: "primary",
           },
+          // The initial tile
           // {
           //   label: "Donate",
           //   href: "/donate",
