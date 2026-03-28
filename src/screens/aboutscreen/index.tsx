@@ -6,11 +6,12 @@ import ourNameImg from "@/asset/images/ourNameImg.png";
 import ourPromiseImg from "@/asset/images/ourPromiseImg.png";
 import CompassPoints from "@/components/compassPoints";
 import infoIcon from "@/asset/icons/infoIcon.svg";
-import whiteMoneyStandIcon from "@/asset/icons/whiteMoneyStandIcon.svg";
+import whiteHeart from "@/asset/icons/whiteHeart.svg";
+// import whiteMoneyStandIcon from "@/asset/icons/whiteMoneyStandIcon.svg";
 import calenderIcon from "@/asset/icons/calenderIcon.svg";
 import ActionTiles from "@/components/actionTiles";
-import { useRef, useState } from "react";
-import { IoIosPlayCircle } from "react-icons/io";
+// import { useRef, useState } from "react";
+// import { IoIosPlayCircle } from "react-icons/io";
 import PromiseSection from "@/components/promiseSection";
 import CardGrid from "@/components/cardGrid";
 
@@ -19,19 +20,19 @@ import educationIcon from "@/asset/icons/educationIcon.svg";
 import energyIcon from "@/asset/icons/energyIcon.svg";
 import whiteHealthIcon from "@/asset/icons/whiteHealthIcon.svg";
 
-import profileImg1 from "@/asset/images/profileImg1.webp";
-import profileImg2 from "@/asset/images/profileImg2.webp";
-import profileImg3 from "@/asset/images/profileImg3.webp";
-import profileImg4 from "@/asset/images/profileImg4.webp";
-import profileImg5 from "@/asset/images/profileImg5.webp";
-import profileImg6 from "@/asset/images/profileImg6.webp";
-import profileImg7 from "@/asset/images/profileImg7.webp";
-import profileImg8 from "@/asset/images/profileImg8.webp";
-import TeamSection from "@/components/teamSection";
+// import profileImg1 from "@/asset/images/profileImg1.webp";
+// import profileImg2 from "@/asset/images/profileImg2.webp";
+// import profileImg3 from "@/asset/images/profileImg3.webp";
+// import profileImg4 from "@/asset/images/profileImg4.webp";
+// import profileImg5 from "@/asset/images/profileImg5.webp";
+// import profileImg6 from "@/asset/images/profileImg6.webp";
+// import profileImg7 from "@/asset/images/profileImg7.webp";
+// import profileImg8 from "@/asset/images/profileImg8.webp";
+// import TeamSection from "@/components/teamSection";
 
 const AboutScreen = () => {
-  const [playing, setPlaying] = useState<boolean>(false);
-  const vidRef = useRef<HTMLVideoElement>(null);
+  // const [ playing, setPlaying] = useState<boolean>(false);
+  // const vidRef = useRef<HTMLVideoElement>(null);
 
   const compassPoints = [
     {
@@ -115,98 +116,98 @@ const AboutScreen = () => {
     },
   ];
 
-  const team = [
-    {
-      name: "Leonard John Davies",
-      title: "Cofounder",
-      subtitle: "CEO",
-      photo: profileImg1,
-      facebookUrl: "#",
-      twitterUrl: "#",
-      linkedinUrl: "#",
-    },
-    {
-      name: "Francis Weber",
-      title: "Vice Chairman",
-      subtitle: "",
-      photo: profileImg2,
-      facebookUrl: "#",
-      twitterUrl: "#",
-      linkedinUrl: "#",
-    },
-    {
-      name: "Kyla Obrien",
-      title: "Head of Authority",
-      subtitle: "",
-      photo: profileImg3,
-      facebookUrl: "#",
-      twitterUrl: "#",
-      linkedinUrl: "#",
-    },
-    {
-      name: "Adrian Dixon",
-      title: "Support Executive",
-      subtitle: "",
-      photo: profileImg4,
-      facebookUrl: "#",
-      twitterUrl: "#",
-      linkedinUrl: "#",
-    },
-    {
-      name: "Freddy Busby",
-      title: "Project Manager",
-      subtitle: "",
-      photo: profileImg5,
-      facebookUrl: "#",
-      twitterUrl: "#",
-      linkedinUrl: "#",
-    },
-    {
-      name: "Dale Banks",
-      title: "Accountant",
-      subtitle: "Finance",
-      photo: profileImg6,
-      facebookUrl: "#",
-      twitterUrl: "#",
-      linkedinUrl: "#",
-    },
-    {
-      name: "Miriam Middleton",
-      title: "Cofounder",
-      subtitle: "CEO",
-      photo: profileImg7,
-      facebookUrl: "#",
-      twitterUrl: "#",
-      linkedinUrl: "#",
-    },
-    {
-      name: "Ellen Walton",
-      title: "Vice Chairman",
-      subtitle: "",
-      photo: profileImg8,
-      facebookUrl: "#",
-      twitterUrl: "#",
-      linkedinUrl: "#",
-    },
-  ];
+  // const team = [
+  //   {
+  //     name: "Leonard John Davies",
+  //     title: "Cofounder",
+  //     subtitle: "CEO",
+  //     photo: profileImg1,
+  //     facebookUrl: "#",
+  //     twitterUrl: "#",
+  //     linkedinUrl: "#",
+  //   },
+  //   {
+  //     name: "Francis Weber",
+  //     title: "Vice Chairman",
+  //     subtitle: "",
+  //     photo: profileImg2,
+  //     facebookUrl: "#",
+  //     twitterUrl: "#",
+  //     linkedinUrl: "#",
+  //   },
+  //   {
+  //     name: "Kyla Obrien",
+  //     title: "Head of Authority",
+  //     subtitle: "",
+  //     photo: profileImg3,
+  //     facebookUrl: "#",
+  //     twitterUrl: "#",
+  //     linkedinUrl: "#",
+  //   },
+  //   {
+  //     name: "Adrian Dixon",
+  //     title: "Support Executive",
+  //     subtitle: "",
+  //     photo: profileImg4,
+  //     facebookUrl: "#",
+  //     twitterUrl: "#",
+  //     linkedinUrl: "#",
+  //   },
+  //   {
+  //     name: "Freddy Busby",
+  //     title: "Project Manager",
+  //     subtitle: "",
+  //     photo: profileImg5,
+  //     facebookUrl: "#",
+  //     twitterUrl: "#",
+  //     linkedinUrl: "#",
+  //   },
+  //   {
+  //     name: "Dale Banks",
+  //     title: "Accountant",
+  //     subtitle: "Finance",
+  //     photo: profileImg6,
+  //     facebookUrl: "#",
+  //     twitterUrl: "#",
+  //     linkedinUrl: "#",
+  //   },
+  //   {
+  //     name: "Miriam Middleton",
+  //     title: "Cofounder",
+  //     subtitle: "CEO",
+  //     photo: profileImg7,
+  //     facebookUrl: "#",
+  //     twitterUrl: "#",
+  //     linkedinUrl: "#",
+  //   },
+  //   {
+  //     name: "Ellen Walton",
+  //     title: "Vice Chairman",
+  //     subtitle: "",
+  //     photo: profileImg8,
+  //     facebookUrl: "#",
+  //     twitterUrl: "#",
+  //     linkedinUrl: "#",
+  //   },
+  // ];
 
-  const handlePlayVideo = () => {
-    if (vidRef.current) {
-      vidRef.current?.play();
-    }
-    setPlaying(true);
-  };
+  // const handlePlayVideo = () => {
+  //   if (vidRef.current) {
+  //     vidRef.current?.play();
+  //   }
+  //   setPlaying(true);
+  // };
 
-  const handlePauseVideo = () => {
-    if (vidRef.current) {
-      vidRef.current.pause();
-    }
-    setPlaying(false);
-  };
+  // const handlePauseVideo = () => {
+  //   if (vidRef.current) {
+  //     vidRef.current.pause();
+  //   }
+  //   setPlaying(false);
+  // };
 
-  const handleVideoEnded = () => {
-    setPlaying(false);
-  };
+  // const handleVideoEnded = () => {
+  //   setPlaying(false);
+  // };
 
   return (
     <div>
@@ -232,7 +233,7 @@ const AboutScreen = () => {
           enlightenment, and lasting impact.
         </Typography.BigText>
       </div>
-      <div className="relative mx-auto h-[448px] w-full max-w-4xl overflow-hidden rounded-[20px] border-[5px] border-white mt-16">
+      {/* <div className="relative mx-auto h-[448px] w-full max-w-4xl overflow-hidden rounded-[20px] border-[5px] border-white mt-16">
         <video
           src="https://res.cloudinary.com/kodobe/video/upload/v1770806521/yadlaub2nhhzxrln0hdz.mp4"
           width={341}
@@ -256,7 +257,7 @@ const AboutScreen = () => {
             />
           </button>
         )}
-      </div>
+      </div> */}
 
       <div className="mt-10">
         <PromiseSection
@@ -346,9 +347,9 @@ const AboutScreen = () => {
         </Typography.BigText>
       </div>
 
-      <div className="mt-16">
+      {/* <div className="mt-16">
         <TeamSection members={team} />
-      </div>
+      </div> */}
 
       <div className="flex flex-col items-center space-y-5 mt-16">
         <Typography.BigText className="text-center md:text-[24px] md:w-[55%]">
@@ -386,18 +387,31 @@ const AboutScreen = () => {
             variant: "accent",
           },
           {
-            label: "Donate",
-            href: "/donate",
+            label: "Volunteer With Us",
+            href: "/volunteer",
             Icon: (
               <Image
-                src={whiteMoneyStandIcon}
-                alt="white-moneyStand-img"
+                src={whiteHeart}
+                alt="white-heart-img"
                 width={60}
                 height={60}
               />
             ),
             variant: "primary",
           },
+          // {
+          //   label: "Donate",
+          //   href: "/donate",
+          //   Icon: (
+          //     <Image
+          //       src={whiteMoneyStandIcon}
+          //       alt="white-moneyStand-img"
+          //       width={60}
+          //       height={60}
+          //     />
+          //   ),
+          //   variant: "primary",
+          // },
         ]}
       />
     </div>
