@@ -46,7 +46,7 @@ export default function CompassPoints({
     <section className={cn("w-full py-12", className)}>
       <div className="mx-auto w-[90%]">
         <div className="text-center">
-          <Typography.H1 className="text-black">{heading}</Typography.H1>
+          <Typography.H2 className="text-black sm:text-[36px] md:text-[44px]">{heading}</Typography.H2>
           {subheading ? (
             <Typography.BigText className="mt-2 md:text-[24px] text-black/70">
               {subheading}

@@ -7,7 +7,8 @@ import missionImg from "@/asset/images/missionImg.webp";
 import SplitSection from "@/components/splitSection";
 import CompassPoints from "@/components/compassPoints";
 import whiteHeart from "@/asset/icons/whiteHeart.svg";
-import moneyStand from "@/asset/icons/moneyStand.svg";
+// import moneyStand from "@/asset/icons/moneyStand.svg";
+import infoIcon from "@/asset/icons/infoIcon.svg";
 import whiteCalender from "@/asset/icons/whiteCalender.svg";
 import ActionTiles from "@/components/actionTiles";
 import headingBg from "@/asset/images/headingBg.png";
@@ -128,9 +129,9 @@ const HomeScreen = () => {
         className="bg-primary p-10 w-full bg-cover flex flex-col items-center mt-10 space-y-3"
         style={{ backgroundImage: `url(${headingBg.src})` }}
       >
-        <Typography.H1 className="text-white text-center">
+        <Typography.H2 className="text-white text-center sm:text-[36px] md:text-[44px]">
           Why We Exist
-        </Typography.H1>
+        </Typography.H2>
         <Typography.BigText className="text-white md:text-[18px] font-extralight text-center w-[80%]">
           In a world clouded by misinformation, confusion, and fear, Nordia
           Foundation stands as a beacon of clarity and direction. We guide
@@ -166,13 +167,26 @@ const HomeScreen = () => {
             ),
             variant: "primary",
           },
+          // {
+          //   label: "Donate Now",
+          //   href: "/donate",
+          //   Icon: (
+          //     <Image
+          //       src={moneyStand}
+          //       alt="white-heart-img"
+          //       width={60}
+          //       height={60}
+          //     />
+          //   ),
+          //   variant: "accent",
+          // },
           {
-            label: "Donate Now",
-            href: "/donate",
+            label: "See Our Work",
+            href: "/work",
             Icon: (
               <Image
-                src={moneyStand}
-                alt="white-heart-img"
+                src={infoIcon}
+                alt="white-info-img"
                 width={60}
                 height={60}
               />

@@ -8,7 +8,8 @@ import partnerImg from "@/asset/images/partnerImg.webp";
 
 import ActionTiles from "@/components/actionTiles";
 import whiteHeart from "@/asset/icons/whiteHeart.svg";
-import moneyStand from "@/asset/icons/moneyStand.svg";
+// import moneyStand from "@/asset/icons/moneyStand.svg";
+import infoIcon from "@/asset/icons/infoIcon.svg";
 import whiteCalender from "@/asset/icons/whiteCalender.svg";
 import PrimaryButton from "@/components/buttons/PrimaryButton";
 import SplitSection from "@/components/splitSection";
@@ -177,13 +178,26 @@ const EventsOutreachScreen = () => {
             ),
             variant: "primary",
           },
+          // {
+          //   label: "Donate Now",
+          //   href: "/donate",
+          //   Icon: (
+          //     <Image
+          //       src={moneyStand}
+          //       alt="white-heart-img"
+          //       width={60}
+          //       height={60}
+          //     />
+          //   ),
+          //   variant: "accent",
+          // },
           {
-            label: "Donate Now",
-            href: "/donate",
+            label: "See Our Work",
+            href: "/work",
             Icon: (
               <Image
-                src={moneyStand}
-                alt="white-heart-img"
+                src={infoIcon}
+                alt="white-info-img"
                 width={60}
                 height={60}
               />
