@@ -362,7 +362,7 @@ const AboutScreen = () => {
         items={[
           {
             label: "See Our Work",
-            href: "/work",
+            href: "/what-we-do",
             Icon: (
               <Image
                 src={infoIcon}
@@ -375,7 +375,7 @@ const AboutScreen = () => {
           },
           {
             label: "Join an Outreach",
-            href: "/outreach",
+            href: "/events-and-outreaches",
             Icon: (
               <Image
                 src={calenderIcon}
@@ -388,7 +388,8 @@ const AboutScreen = () => {
           },
           {
             label: "Volunteer With Us",
-            href: "/volunteer",
+            href: "https://forms.gle/kLSgC1Z3eEicvfRQA",
+            target: true,
             Icon: (
               <Image
                 src={whiteHeart}

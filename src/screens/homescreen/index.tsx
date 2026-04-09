@@ -108,7 +108,7 @@ const HomeScreen = () => {
         </Typography.Text>
         <div className="pt-5 sm:flex items-center space-x-5 space-y-5 sm:space-y-0">
           <PrimaryButton href="/about">Learn About Us</PrimaryButton>
-          <PrimaryButton href="/support">Support Our Work</PrimaryButton>
+          {/* <PrimaryButton href="/support">Support Our Work</PrimaryButton> */}
         </div>
       </div>
       <div>
@@ -156,7 +156,8 @@ const HomeScreen = () => {
         items={[
           {
             label: "Volunteer With Us",
-            href: "/volunteer",
+            href: "https://forms.gle/kLSgC1Z3eEicvfRQA",
+            target: true,
             Icon: (
               <Image
                 src={whiteHeart}
@@ -182,7 +183,7 @@ const HomeScreen = () => {
           // },
           {
             label: "See Our Work",
-            href: "/work",
+            href: "/what-we-do",
             Icon: (
               <Image
                 src={infoIcon}
@@ -195,7 +196,7 @@ const HomeScreen = () => {
           },
           {
             label: "Attend An Outreach",
-            href: "/outreach",
+            href: "/events-and-outreaches",
             Icon: (
               <Image
                 src={whiteCalender}

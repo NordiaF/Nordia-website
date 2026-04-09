@@ -12,7 +12,7 @@ export type NewsletterSectionProps = {
   description?: string;
   subheading?: string;
   buttonText?: string;
-  onSubmit?: (data: NewsletterFormData) => void;
+  onSubmit?: (data: NewsletterFormData) => void | Promise<void>;
   className?: string;
 };
 
@@ -20,7 +20,7 @@ export type NewsletterFormData = {
   firstName: string;
   lastName: string;
   email: string;
-  subject: string;
+  // subject: string;
   message: string;
 };
 
@@ -36,22 +36,88 @@ export default function NewsletterSection({
     firstName: "",
     lastName: "",
     email: "",
-    subject: "",
+    // subject: "",
     message: "",
   });
+  const [isSubmitting, setIsSubmitting] = useState(false);
+  const [submitState, setSubmitState] = useState<{
+    type: "success" | "error" | null;
+    message: string;
+  }>({
+    type: null,
+    message: "",
+  });
+  const appsScriptUrl = process.env.NEXT_PUBLIC_NEWSLETTER_APPS_SCRIPT_URL;
 
   const handleChange = (
     e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>
   ) => {
+    if (submitState.type) {
+      setSubmitState({ type: null, message: "" });
+    }
+
     setFormData((prev) => ({
       ...prev,
       [e.target.name]: e.target.value,
     }));
   };
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
-    onSubmit?.(formData);
+
+    if (!appsScriptUrl) {
+      setSubmitState({
+        type: "error",
+        message:
+          "Newsletter form is not connected yet. Add NEXT_PUBLIC_NEWSLETTER_APPS_SCRIPT_URL to enable submissions.",
+      });
+      return;
+    }
+
+    setIsSubmitting(true);
+    setSubmitState({ type: null, message: "" });
+
+    try {
+      const payload = new URLSearchParams({
+        firstName: formData.firstName,
+        lastName: formData.lastName,
+        email: formData.email,
+        message: formData.message,
+        submittedAt: new Date().toISOString(),
+        source: "blog-newsletter",
+      });
+
+      await fetch(appsScriptUrl, {
+        method: "POST",
+        mode: "no-cors",
+        headers: {
+          "Content-Type": "application/x-www-form-urlencoded;charset=UTF-8",
+        },
+        body: payload.toString(),
+      });
+
+      await onSubmit?.(formData);
+
+      setFormData({
+        firstName: "",
+        lastName: "",
+        email: "",
+        message: "",
+      });
+      setSubmitState({
+        type: "success",
+        message:
+          "Thanks for subscribing. Your details have been sent successfully.",
+      });
+    } catch {
+      setSubmitState({
+        type: "error",
+        message:
+          "We could not send your details right now. Please try again in a moment.",
+      });
+    } finally {
+      setIsSubmitting(false);
+    }
   };
 
   return (
@@ -82,6 +148,7 @@ export default function NewsletterSection({
               placeholder="John"
               value={formData.firstName}
               onChange={handleChange}
+              required
             />
             <FormInput
               label="Last Name"
@@ -89,6 +156,7 @@ export default function NewsletterSection({
               placeholder="Doe"
               value={formData.lastName}
               onChange={handleChange}
+              required
             />
             <FormInput
               label="Email Id"
@@ -97,14 +165,15 @@ export default function NewsletterSection({
               placeholder="johndoe@gmail.com"
               value={formData.email}
               onChange={handleChange}
+              required
             />
-            <FormInput
+            {/* <FormInput
               label="Subject"
               name="subject"
               placeholder=""
               value={formData.subject}
               onChange={handleChange}
-            />
+            /> */}
           </div>
 
           <div className="mt-6">
@@ -115,15 +184,29 @@ export default function NewsletterSection({
               value={formData.message}
               onChange={handleChange}
               rows={5}
+              required
             />
           </div>
+
+          {submitState.type ? (
+            <div
+              className={cn(
+                "mt-6 rounded-xl border px-4 py-3 text-sm",
+                submitState.type === "success"
+                  ? "border-green-200 bg-green-50 text-green-800"
+                  : "border-red-200 bg-red-50 text-red-700"
+              )}
+            >
+              {submitState.message}
+            </div>
+          ) : null}
 
           <div className="mt-8 flex justify-center">
             <PrimaryButton
               type="submit"
               className="w-full sm:w-[60%] bg-accent text-black"
             >
-              {buttonText}
+              {isSubmitting ? "Sending..." : buttonText}
             </PrimaryButton>
           </div>
         </form>

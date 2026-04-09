@@ -64,6 +64,45 @@ Open [http://localhost:3000](http://localhost:3000) in your browser to see the a
 
 The application will auto-reload as you edit files in the `src/app` directory.
 
+## Google Sheet Integration
+
+The blog newsletter form can submit directly to a Google Sheet through a Google Apps Script web app.
+
+1. Create a sheet with columns such as `firstName`, `lastName`, `email`, `message`, `submittedAt`, and `source`
+2. Open `Extensions` -> `Apps Script` from the target Google Sheet
+3. Paste a script like this:
+
+```javascript
+function doPost(e) {
+  const sheet = SpreadsheetApp.getActiveSpreadsheet().getSheets()[0];
+  const data = e.parameter;
+
+  sheet.appendRow([
+    data.firstName || "",
+    data.lastName || "",
+    data.email || "",
+    data.message || "",
+    data.submittedAt || "",
+    data.source || "",
+  ]);
+
+  return ContentService
+    .createTextOutput(JSON.stringify({ ok: true }))
+    .setMimeType(ContentService.MimeType.JSON);
+}
+```
+
+4. Deploy the script as a Web App:
+   - Execute as: `Me`
+   - Who has access: `Anyone`
+5. Copy the deployed URL into `.env.local` as:
+
+```bash
+NEXT_PUBLIC_NEWSLETTER_APPS_SCRIPT_URL=https://script.google.com/macros/s/YOUR_DEPLOYMENT_ID/exec
+```
+
+6. Restart the Next.js dev server after updating the environment file
+
 ## Available Scripts
 
 - `npm run dev` - Start development server with hot reload

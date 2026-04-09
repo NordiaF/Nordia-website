@@ -7,6 +7,7 @@ export type ActionTileItem = {
   href: string;
   Icon: React.ReactNode
   variant?: "primary" | "accent";
+  target?: boolean;
 };
 
 export type ActionTilesProps = {
@@ -28,7 +29,8 @@ export default function ActionTiles({ items, className }: ActionTilesProps) {
               <Link
                 key={`${item.href}-${item.label}`}
                 href={item.href}
-                className={cn(
+                target={item.target ? "_blank" : undefined}
+                className={cn(  
                   "flex min-h-[110px] items-center justify-center px-8 py-8 text-center transition hover:brightness-95",
                   tileBg,
                   fg

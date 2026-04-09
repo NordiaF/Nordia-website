@@ -22,8 +22,8 @@ export default function ApproachSection({
   heading,
   description,
   items,
-  ctaText = "Partner With Us",
-  ctaHref = "/support",
+  ctaText,
+  ctaHref,
   className,
 }: ApproachSectionProps) {
   return (
