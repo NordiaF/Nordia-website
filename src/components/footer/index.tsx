@@ -25,10 +25,22 @@ const footerLinks = [
   {
     title: "Connect",
     links: [
-      { label: "Facebook", href: "https://facebook.com", external: true },
-      { label: "Instagram", href: "https://instagram.com", external: true },
-      { label: "Twitter", href: "https://twitter.com", external: true },
-      { label: "Linkdin", href: "https://linkedin.com", external: true }, // keeping the spelling from the screenshot
+      {
+        label: "TikTok",
+        href: "https://www.tiktok.com/@nordiahq?_r=1&_t=ZS-95EaAqJkQOT",
+        external: true,
+      },
+      {
+        label: "Instagram",
+        href: "https://www.instagram.com/nordiahq?igsh=MjZyNm15aGkzNHE2",
+        external: true,
+      },
+      { label: "X", href: "https://x.com/Nordiahq", external: true },
+      {
+        label: "LinkedIn",
+        href: "https://www.linkedin.com/company/nordiahq/",
+        external: true,
+      },
     ],
   },
 ];
