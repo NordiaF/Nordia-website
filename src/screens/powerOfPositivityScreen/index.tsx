@@ -32,7 +32,7 @@ const PowerOfPositivityScreen = () => {
         style={{ backgroundImage: `url(${headingBg.src})` }}
       >
         <Typography.H1 className="p-5 text-white md:text-[72px] text-center w-full leading-tight">
-          Power of Positivity
+          Power of Productivity
         </Typography.H1>
       </div>
 
