@@ -1,11 +1,10 @@
 import headingBg from "@/asset/images/headingBg.png";
 import Typography from "@/utils/Typography";
-import PrimaryButton from "@/components/buttons/PrimaryButton";
 
 // const assessmentFormLink =
-//   "https://docs.google.com/forms/d/e/1FAIpQLSdjd6f7bEaPfTUB3hYO0WY0GfAl4ryKLqKG6nOrb-Dolcqd8A/viewform";
+//   "https://docs.google.com/forms/d/e/1FAIpQLSfo7CcPn51m_hb-DPEUVMDOyW_GZXz_ImO56yft8iI0BlvcBg/viewform";
 const embeddedAssessmentFormLink =
-  "https://docs.google.com/forms/d/e/1FAIpQLSdjd6f7bEaPfTUB3hYO0WY0GfAl4ryKLqKG6nOrb-Dolcqd8A/viewform?embedded=true";
+  "https://docs.google.com/forms/d/e/1FAIpQLSfo7CcPn51m_hb-DPEUVMDOyW_GZXz_ImO56yft8iI0BlvcBg/viewform?embedded=true";
 
 const applicationSteps = [
   {
@@ -108,7 +107,7 @@ const PowerOfPositivityScreen = () => {
             <iframe
               title="Nordia Live Lit Assessment Form"
               src={embeddedAssessmentFormLink}
-              className="h-[1200px] w-full rounded-[18px] sm:h-[1350px] md:h-[1500px]"
+              className="h-[450px] w-full rounded-[18px] sm:h-[450px] md:h-[400px]"
             >
               Loading…
             </iframe>
