@@ -15,7 +15,7 @@ const footerLinks = [
   {
     title: "More",
     links: [
-      { label: "Power of Positivity", href: "/power-of-positivity" },
+      { label: "Power of productivity", href: "/power-of-productivity" },
       { label: "Projects", href: "/projects" },
       { label: "Events", href: "/events" },
       { label: "Donate", href: "/donate" },
