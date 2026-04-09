@@ -9,7 +9,7 @@ const routes = [
   "/events-and-outreaches",
   "/contact",
   "/blog",
-  "/power-of-productivity",
+  "/power-your-productivity",
 ];
 
 export default function sitemap(): MetadataRoute.Sitemap {
