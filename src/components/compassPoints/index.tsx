@@ -38,8 +38,8 @@ export default function CompassPoints({
   heading,
   subheading = "These Four Values Guide Everything We Do:",
   items,
-  ctaText = "Read Our Story",
-  ctaHref = "/about",
+  ctaText = "",
+  ctaHref = "",
   className,
 }: CompassPointsProps) {
   return (

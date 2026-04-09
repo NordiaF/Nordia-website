@@ -15,6 +15,7 @@ const footerLinks = [
   {
     title: "More",
     links: [
+      { label: "Power of Positivity", href: "/power-of-positivity" },
       { label: "Projects", href: "/projects" },
       { label: "Events", href: "/events" },
       { label: "Donate", href: "/donate" },
@@ -109,22 +110,19 @@ const Footer = () => {
               updates
             </h3>
 
-            <form
-              className="mt-8 flex w-full max-w-xl items-center gap-0"
-              //   onSubmit={(e) => e.preventDefault()}
-            >
+            <form className="mt-8 flex w-full max-w-xl items-center gap-0">
               <div className="flex w-full items-center rounded-md border border-white/20 bg-transparent">
-                <input
+                {/* <input
                   type="email"
                   placeholder="Your email"
                   className="h-14 w-full bg-transparent px-6 text-sm text-white placeholder:text-white/50 outline-none"
-                />
-                <button
-                  type="submit"
-                  className="h-14 shrink-0 rounded-md bg-white px-8 text-sm font-semibold text-black hover:opacity-95"
+                /> */}
+                <Link
+                  href="/blog#newsletter-subscribe"
+                  className="inline-flex h-14 w-full shrink-0 items-center justify-center rounded-md bg-white px-8 text-sm font-semibold text-black hover:opacity-95"
                 >
                   Subscribe
-                </button>
+                </Link>
               </div>
             </form>
           </div>

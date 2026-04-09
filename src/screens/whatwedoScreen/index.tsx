@@ -88,7 +88,7 @@ const WhatWeDoScreen = () => {
         <div className="w-full flex justify-center">
           <PrimaryButton
             className="w-full sm:w-[60%] bg-[#F6BA63]"
-            href="/media"
+            href="/events-and-outreaches"
           >
             Explore Our Programs
           </PrimaryButton>
@@ -137,8 +137,8 @@ const WhatWeDoScreen = () => {
               description: "Drive real-world change that improves lives.",
             },
           ]}
-          ctaText="Partner With Us"
-          ctaHref="/support"
+          // ctaText="Partner With Us"
+          // ctaHref="/support"
         />
       </div>
 
@@ -167,7 +167,7 @@ const WhatWeDoScreen = () => {
             </Typography.Text>
           }
           buttonText="See More Stories of Impact"
-          buttonHref="/impact"
+          buttonHref="/events-and-outreaches"
           image1={snapShot1}
           image2={snapShot2}
         />
@@ -183,7 +183,7 @@ const WhatWeDoScreen = () => {
         items={[
           {
             label: "Learn About Us",
-            href: "/work",
+            href: "/about",
             Icon: (
               <Image
                 src={infoIcon}
@@ -195,8 +195,8 @@ const WhatWeDoScreen = () => {
             variant: "primary",
           },
           {
-            label: "Join an Upcoming Event",
-            href: "/outreach",
+            label: "Attend An Outreach",
+            href: "/events-and-outreaches",
             Icon: (
               <Image
                 src={calenderIcon}
@@ -208,8 +208,9 @@ const WhatWeDoScreen = () => {
             variant: "accent",
           },
           {
-            label: "Support Our Mission",
-            href: "/donate",
+            label: "Volunteer With Us",
+            href: "https://forms.gle/kLSgC1Z3eEicvfRQA",
+            target: true,
             Icon: (
               <Image
                 src={handShakeIcon}

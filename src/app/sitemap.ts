@@ -9,6 +9,7 @@ const routes = [
   "/events-and-outreaches",
   "/contact",
   "/blog",
+  "/power-of-positivity",
 ];
 
 export default function sitemap(): MetadataRoute.Sitemap {

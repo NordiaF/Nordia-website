@@ -168,8 +168,14 @@ If you have questions, collaboration ideas, or want to bring Nordia to your comm
           truth. <br /> Your skills can make a real difference.
         </Typography.Text>
         <div className="pt-5 sm:flex items-center space-x-5 space-y-5 sm:space-y-0">
-          <PrimaryButton href="/about">Become a Volunteer</PrimaryButton>
-          <PrimaryButton href="/support">
+          <a
+            href="https://forms.gle/kLSgC1Z3eEicvfRQA"
+            target="_blank"
+            rel="noreferrer"
+          >
+            <PrimaryButton>Become a Volunteer</PrimaryButton>
+          </a>
+          <PrimaryButton href="/events-and-outreaches">
             Join an Upcoming outreach
           </PrimaryButton>
         </div>

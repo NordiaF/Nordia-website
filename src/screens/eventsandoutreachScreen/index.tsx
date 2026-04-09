@@ -113,14 +113,14 @@ const EventsOutreachScreen = () => {
           </span>
         </Typography.BigText>
 
-        <div className="w-full flex justify-center">
+        {/* <div className="w-full flex justify-center">
           <PrimaryButton
             className="w-full sm:w-[60%] bg-[#F6BA63]"
-            href="/media"
+            href="/events-and-outreaches"
           >
             Support Our Next Outreach
           </PrimaryButton>
-        </div>
+        </div> */}
       </div>
 
       <div
@@ -167,7 +167,8 @@ const EventsOutreachScreen = () => {
         items={[
           {
             label: "Volunteer With Us",
-            href: "/volunteer",
+            href: "https://forms.gle/kLSgC1Z3eEicvfRQA",
+            target: true,
             Icon: (
               <Image
                 src={whiteHeart}
@@ -193,7 +194,7 @@ const EventsOutreachScreen = () => {
           // },
           {
             label: "See Our Work",
-            href: "/work",
+            href: "/what-we-do",
             Icon: (
               <Image
                 src={infoIcon}
@@ -206,7 +207,7 @@ const EventsOutreachScreen = () => {
           },
           {
             label: "Attend An Outreach",
-            href: "/outreach",
+            href: "/events-and-outreaches",
             Icon: (
               <Image
                 src={whiteCalender}
@@ -221,7 +222,7 @@ const EventsOutreachScreen = () => {
       />
       <div className="flex flex-col items-center mb-16 space-y-5">
         <Typography.H2 className="text-center md:text-[32px] md:w-[55%] leading-tight">
-        Moments That Matter
+          Moments That Matter
         </Typography.H2>
         <Typography.BigText className="text-center md:text-[24px] md:w-[55%]">
           Coming soon a gallery of photos and videos from our recent outreach
@@ -231,7 +232,7 @@ const EventsOutreachScreen = () => {
         <div className="w-full flex justify-center">
           <PrimaryButton
             className="w-full sm:w-[45%] bg-[#F6BA63]"
-            href="/media"
+            href="/what-we-do"
           >
             See Our Work in Action
           </PrimaryButton>
