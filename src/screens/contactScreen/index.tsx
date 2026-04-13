@@ -2,10 +2,10 @@ import Image from "next/image";
 import headingBg from "@/asset/images/headingBg.png";
 import Typography from "@/utils/Typography";
 import snapShot1 from "@/asset/images/supportMission.webp";
-import healthAwarenessImg from "@/asset/images/VisionImg.webp";
+import healthAwarenessImg from "@/asset/images/kidsImg.jpg.webp";
 import informIcon from "@/asset/icons/informIcon.svg";
 import inspireIcon from "@/asset/icons/inspireIcon.svg";
-import transformIcon from "@/asset/icons/transformIcon.svg";
+// import transformIcon from "@/asset/icons/transformIcon.svg";
 
 import ActionTiles from "@/components/actionTiles";
 import infoIcon from "@/asset/icons/infoIcon.svg";
