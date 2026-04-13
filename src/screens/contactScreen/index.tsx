@@ -114,7 +114,7 @@ If you have questions, collaboration ideas, or want to bring Nordia to your comm
                 />
               ),
               title: "Email",
-              description: "354656uiuoljhkjghvbnm@ghgjhmnbnvbc",
+              description: "hello@nordiafoundation.org",
             },
             {
               icon: (
@@ -126,23 +126,23 @@ If you have questions, collaboration ideas, or want to bring Nordia to your comm
                 />
               ),
               title: "Send Us a Message",
-              description: "134567876y56453rdfhguyty",
+              description: "+234 813 545 3620",
             },
-            {
-              icon: (
-                <Image
-                  src={transformIcon}
-                  alt="inform-img"
-                  width={51}
-                  height={51}
-                />
-              ),
-              title: "Partner With Nordia",
-              description: "3456yuyikjhjguytyfvnbmkjliuyutr!@ghb",
-            },
+            // {
+            //   icon: (
+            //     <Image
+            //       src={transformIcon}
+            //       alt="inform-img"
+            //       width={51}
+            //       height={51}
+            //     />
+            //   ),
+            //   title: "Partner With Nordia",
+            //   description: "3456yuyikjhjguytyfvnbmkjliuyutr!@ghb",
+            // },
           ]}
-          ctaText="Partner With Us"
-          ctaHref="/support"
+          // ctaText="Partner With Us"
+          // ctaHref="/support"
         />
       </div>
 
@@ -190,7 +190,7 @@ If you have questions, collaboration ideas, or want to bring Nordia to your comm
         items={[
           {
             label: "Learn About Us",
-            href: "/work",
+            href: "/about",
             Icon: (
               <Image
                 src={infoIcon}
@@ -203,7 +203,7 @@ If you have questions, collaboration ideas, or want to bring Nordia to your comm
           },
           {
             label: "Join an Upcoming Event",
-            href: "/outreach",
+            href: "/vents-and-outreaches",
             Icon: (
               <Image
                 src={calenderIcon}
@@ -216,7 +216,8 @@ If you have questions, collaboration ideas, or want to bring Nordia to your comm
           },
           {
             label: "Support Our Mission",
-            href: "/donate",
+            href: "https://forms.gle/kLSgC1Z3eEicvfRQA",
+            target: true,
             Icon: (
               <Image
                 src={handShakeIcon}

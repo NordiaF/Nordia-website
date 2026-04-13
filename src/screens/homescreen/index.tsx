@@ -2,7 +2,7 @@ import Image from "next/image";
 import heroImage from "@/asset/images/heroImage.webp";
 import Typography from "@/utils/Typography";
 import PrimaryButton from "@/components/buttons/PrimaryButton";
-import visionImg from "@/asset/images/VisionImg.webp";
+import visionImg from "@/asset/images/kidsImg.jpg.webp";
 import missionImg from "@/asset/images/missionImg.webp";
 import SplitSection from "@/components/splitSection";
 import CompassPoints from "@/components/compassPoints";

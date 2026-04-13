@@ -120,7 +120,7 @@ const WhatWeDoScreen = () => {
                   height={51}
                 />
               ),
-              title: "Inspire",
+              title: "Transform",
               description:
                 "Empower people to think critically and believe in their potential.",
             },
@@ -133,7 +133,7 @@ const WhatWeDoScreen = () => {
                   height={51}
                 />
               ),
-              title: "Transform",
+              title: "Sustain",
               description: "Drive real-world change that improves lives.",
             },
           ]}
