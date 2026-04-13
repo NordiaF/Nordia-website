@@ -38,7 +38,7 @@ export default function ApproachSection({
           </Typography.BigText>
         </div>
 
-        <div className="mt-10 grid grid-cols-1 gap-8 md:grid-cols-3">
+        <div className={`mt-10 grid grid-cols-1 gap-8 md:grid-cols-${items.length}`}>
           {items.map((item) => (
             <article
               key={item.title}
