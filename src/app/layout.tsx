@@ -1,24 +1,22 @@
 import type { Metadata } from "next";
-import { Dhurjati, Geist, Space_Grotesk } from "next/font/google";
+
+import { Geist, Space_Grotesk, Dhurjati } from "next/font/google";
 import "./globals.css";
 
 const geistSans = Geist({
-  subsets: ["latin"],
   variable: "--font-geist-sans",
-  display: "swap",
+  subsets: ["latin"],
 });
 
 const spaceGrotesk = Space_Grotesk({
+  variable: "--font-primary",
   subsets: ["latin"],
-  variable: "--font-space-grotesk",
-  display: "swap",
 });
 
 const dhurjati = Dhurjati({
-  subsets: ["latin"],
-  weight: "400",
   variable: "--font-dhurjati",
-  display: "swap",
+  weight: "400",
+  subsets: ["latin"],
 });
 
 export const metadata: Metadata = {
@@ -87,7 +85,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body
-        className={`${geistSans.variable} ${spaceGrotesk.variable} ${dhurjati.variable} font-primary antialiased`}
+        className={`${geistSans.variable} ${spaceGrotesk.variable} ${dhurjati.variable} antialiased`}
       >
         <script
           type="application/ld+json"
