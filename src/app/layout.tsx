@@ -1,23 +1,5 @@
 import type { Metadata } from "next";
-
-import { Geist, Space_Grotesk, Dhurjati } from "next/font/google";
 import "./globals.css";
-
-const geistSans = Geist({
-  variable: "--font-geist-sans",
-  subsets: ["latin"],
-});
-
-const spaceGrotesk = Space_Grotesk({
-  variable: "--font-primary",
-  subsets: ["latin"],
-});
-
-const dhurjati = Dhurjati({
-  variable: "--font-dhurjati",
-  weight: "400",
-  subsets: ["latin"],
-});
 
 export const metadata: Metadata = {
   metadataBase: new URL("https://nordiafoundation.org"),
@@ -84,9 +66,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body
-        className={`${geistSans.variable} ${spaceGrotesk.variable} ${dhurjati.variable} antialiased`}
-      >
+      <body className="antialiased">
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{

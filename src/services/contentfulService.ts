@@ -1,13 +1,21 @@
 import type { EntrySkeletonType } from "contentful";
 import { getContentfulClient } from "@/lib/contentful/client";
 
+type ContentfulOrderField =
+  | "fields.publishedDate"
+  | "-fields.publishedDate"
+  | "sys.createdAt"
+  | "-sys.createdAt";
+
+type ContentfulIncludeDepth = 0 | 1 | 2 | 3 | 4 | 5 | 6 | 7 | 8 | 9 | 10;
+
 export type ContentfulQueryOptions = {
   contentType: string;
   slug?: string;
   limit?: number;
   skip?: number;
-  order?: string[];
-  include?: number;
+  order?: ContentfulOrderField[];
+  include?: ContentfulIncludeDepth;
   preview?: boolean;
 };
 
@@ -30,7 +38,8 @@ export async function fetchContentfulEntryCollection<TEntry>({
   const client = getContentfulClient(preview);
   const response = await client.getEntries<EntrySkeletonType>({
     content_type: contentType,
-    order,
+    // The SDK's generic order typing is narrower than the runtime API accepts.
+    order: order as never,
     include,
     ...(slug ? { "fields.slug": slug } : {}),
     ...(typeof limit === "number" ? { limit } : {}),
