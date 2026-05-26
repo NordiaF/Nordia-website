@@ -1,11 +1,22 @@
 import type { Metadata } from "next";
-import { Space_Grotesk } from "next/font/google";
+
+import { Geist, Space_Grotesk, Dhurjati } from "next/font/google";
 import "./globals.css";
 
-const spaceGrotesk = Space_Grotesk({
+const geistSans = Geist({
+  variable: "--font-geist-sans",
   subsets: ["latin"],
-  variable: "--font-space-grotesk",
-  display: "swap",
+});
+
+const spaceGrotesk = Space_Grotesk({
+  variable: "--font-primary",
+  subsets: ["latin"],
+});
+
+const dhurjati = Dhurjati({
+  variable: "--font-dhurjati",
+  weight: "400",
+  subsets: ["latin"],
 });
 
 export const metadata: Metadata = {
@@ -73,7 +84,9 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={`${spaceGrotesk.variable} font-primary antialiased`}>
+      <body
+        className={`${geistSans.variable} ${spaceGrotesk.variable} ${dhurjati.variable} antialiased`}
+      >
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{

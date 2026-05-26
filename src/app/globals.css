@@ -11,6 +11,8 @@
   --color-info-light: #57A0D7;
   --color-highlight: #FFEBB9;
   --color-backgroundColor: #F3F3F3;
+
+  --font-primary: var(--font-primary);
 }
 
 @theme {
@@ -20,12 +22,10 @@
   --color-info-light: var(--color-info-light);
   --color-highlight: var(--color-highlight);
   --color-backgroundColor: var(--color-backgroundColor);
-  --font-primary: "Avenir Next", "Segoe UI", Helvetica, Arial, sans-serif;
-  --font-secondary: var(--font-space-grotesk), "Segoe UI", Helvetica, Arial, sans-serif;
 }
 
 body {
   background: var(--background);
   color: var(--foreground);
-  font-family: var(--font-primary);
+  font-family: var(--font-primary), Helvetica, sans-serif;
 }
