@@ -20,8 +20,9 @@
   --color-info-light: var(--color-info-light);
   --color-highlight: var(--color-highlight);
   --color-backgroundColor: var(--color-backgroundColor);
-  --font-primary: "Avenir Next", "Segoe UI", Helvetica, Arial, sans-serif;
-  --font-secondary: var(--font-space-grotesk), "Segoe UI", Helvetica, Arial, sans-serif;
+  --font-primary: var(--font-space-grotesk), "Segoe UI", Helvetica, Arial, sans-serif;
+  --font-secondary: var(--font-geist-sans), "Segoe UI", Helvetica, Arial, sans-serif;
+  --font-accent: var(--font-dhurjati), "Segoe UI", Helvetica, Arial, sans-serif;
 }
 
 body {
