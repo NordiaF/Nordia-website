@@ -6,6 +6,11 @@ import {
   getBlogPostBySlug,
   getSuggestedBlogPosts,
 } from "@/services/blogService";
+import {
+  buildBlogMetadata,
+  buildBlogPostingSchema,
+  resolveBlogImage,
+} from "@/lib/seo/blog";
 
 export const dynamic = "force-dynamic";
 
@@ -20,12 +25,46 @@ export async function generateMetadata({
   const post = await getBlogPostBySlug(slug);
 
   if (!post) {
-    return { title: "Post Not Found" };
+    return {
+      title: "Post Not Found | Nordia Foundation",
+      robots: {
+        index: false,
+        follow: false,
+      },
+    };
   }
 
+  const seoTitle = post.seoTitle || post.title;
+  const seoDescription = post.seoDescription || post.excerpt;
+  const metadata = buildBlogMetadata({
+    title: seoTitle,
+    description: seoDescription,
+    path: `/blog/${post.slug}`,
+    image: resolveBlogImage(post),
+    type: "article",
+  });
+
   return {
-    title: post.seoTitle,
-    description: post.seoDescription,
+    ...metadata,
+    keywords: [post.category, "Nordia Foundation blog", "community impact"],
+    openGraph: {
+      title: seoTitle,
+      description: seoDescription,
+      url: `https://nordiafoundation.org/blog/${post.slug}`,
+      siteName: "Nordia Foundation",
+      locale: "en_US",
+      type: "article",
+      images: [
+        {
+          url: resolveBlogImage(post),
+          width: 1200,
+          height: 630,
+          alt: seoTitle,
+        },
+      ],
+      publishedTime: post.publishedDate,
+      section: post.category,
+    },
   };
 }
 
@@ -38,9 +77,14 @@ export default async function BlogPostPage({ params }: BlogPostPageProps) {
   }
 
   const suggestedPosts = await getSuggestedBlogPosts(slug, 3);
+  const schema = buildBlogPostingSchema(post);
 
   return (
     <WebsiteLayout>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(schema) }}
+      />
       <BlogPostScreen post={post} suggestedPosts={suggestedPosts} />
     </WebsiteLayout>
   );

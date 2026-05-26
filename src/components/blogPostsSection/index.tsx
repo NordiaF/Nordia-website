@@ -23,7 +23,7 @@ function PostMeta({
   className?: string;
 }) {
   return (
-    <p className={`text-sm font-medium text-black ${className}`}>
+    <p className={`font-primary text-sm font-medium text-black ${className}`}>
       {formatReadTime(post.readTime)} | {formatPublishedDate(post.publishedDate)}
     </p>
   );
@@ -33,7 +33,7 @@ function FeaturedPostCard({ post }: { post: BlogPost }) {
   const imageSrc = post.featuredImageUrl ?? placeholderImage.src;
 
   return (
-    <article className="border border-black/10 bg-white p-5 shadow-[0_10px_35px_rgba(12,24,45,0.06)] sm:p-8">
+    <article className="flex h-full flex-col border border-black/10 bg-white p-5 shadow-[0_10px_35px_rgba(12,24,45,0.06)] sm:p-8">
       <div className="relative aspect-[16/10] w-full overflow-hidden">
         <Image
           src={imageSrc}
@@ -60,10 +60,10 @@ function FeaturedPostCard({ post }: { post: BlogPost }) {
         </Typography.BigText>
       ) : null}
 
-      <div className="mt-8">
+      <div className="mt-8 xl:mt-auto xl:pt-8">
         <PrimaryButton
           href={`/blog/${post.slug}`}
-          className="min-w-52 rounded-none bg-[#F6BA63] px-8 py-4 text-[18px] font-bold text-[#1F2847]"
+          className="font-primary min-w-52 rounded-none bg-[#F6BA63] px-8 py-4 text-[18px] font-bold text-[#1F2847]"
         >
           Read More &gt;
         </PrimaryButton>
@@ -76,7 +76,7 @@ function PostListItem({ post }: { post: BlogPost }) {
   return (
     <Link
       href={`/blog/${post.slug}`}
-      className="block px-6 py-6 transition-colors hover:bg-[#DDECF8] focus:bg-[#DDECF8] focus:outline-none"
+      className="font-primary block flex-1 px-6 py-6 transition-colors hover:bg-[#DDECF8] focus:bg-[#DDECF8] focus:outline-none"
     >
       <div className="flex flex-wrap items-center justify-between gap-3">
         <BlogCategoryBadge category={post.category} />
@@ -129,26 +129,26 @@ export default function BlogPostsSection({
 
   return (
     <section className="mx-auto mt-20 max-w-7xl px-6 lg:px-8">
-      <div className="grid grid-cols-1 gap-12 xl:grid-cols-[minmax(0,1.35fr)_minmax(22rem,0.95fr)] xl:items-start">
-        <div>
-          <Typography.H2 className="text-[32px] font-bold text-[#262B44] sm:text-[40px]">
+      <div className="grid grid-cols-1 gap-12 xl:grid-cols-[minmax(0,1.35fr)_minmax(22rem,0.95fr)] xl:items-stretch">
+        <div className="flex h-full flex-col">
+          <Typography.H2 className="text-[32px] text-[#262B44] sm:text-[40px]">
             Featured Post
           </Typography.H2>
 
-          <div className="mt-8">
+          <div className="mt-8 flex-1">
             <FeaturedPostCard post={featured} />
           </div>
         </div>
 
-        <div>
+        <div className="flex h-full flex-col">
           <div className="flex items-center justify-between gap-4">
-            <Typography.H2 className="text-[32px] font-bold text-[#262B44] sm:text-[40px]">
+            <Typography.H2 className="text-[32px] text-[#262B44] sm:text-[40px]">
               All Posts
             </Typography.H2>
             {rest.length > 0 ? (
               <Link
                 href="/blog/all-posts"
-                className="text-base font-medium text-primary hover:underline"
+                className="font-primary text-base font-medium text-primary hover:underline"
               >
                 See More
               </Link>
@@ -156,7 +156,7 @@ export default function BlogPostsSection({
           </div>
 
           {sidebarPosts.length > 0 ? (
-            <div className="mt-8 divide-y divide-black/10 bg-white shadow-[0_10px_35px_rgba(12,24,45,0.04)]">
+            <div className="mt-8 flex flex-1 flex-col divide-y divide-black/10 bg-white shadow-[0_10px_35px_rgba(12,24,45,0.04)]">
               {sidebarPosts.map((post) => (
                 <PostListItem key={post.id} post={post} />
               ))}
