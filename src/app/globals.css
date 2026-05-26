@@ -11,8 +11,7 @@
   --color-info-light: #57A0D7;
   --color-highlight: #FFEBB9;
   --color-backgroundColor: #F3F3F3;
-
-  --font-primary: var(--font-primary);
+  --font-primary: "Avenir Next", "Segoe UI", Helvetica, Arial, sans-serif;
 }
 
 @theme {
