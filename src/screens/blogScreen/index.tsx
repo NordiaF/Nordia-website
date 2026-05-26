@@ -7,9 +7,16 @@ import infoIcon from "@/asset/icons/infoIcon.svg";
 import calenderIcon from "@/asset/icons/calenderIcon.svg";
 import handShakeIcon from "@/asset/icons/handShakeIcon.svg";
 import PrimaryButton from "@/components/buttons/PrimaryButton";
+import BlogPostsSection from "@/components/blogPostsSection";
 import NewsletterSection from "@/components/newsletterSection";
+import type { BlogPost } from "@/lib/contentful/types";
 
-const BlogScreen = () => {
+type BlogScreenProps = {
+  posts: BlogPost[];
+  isLoading?: boolean;
+};
+
+const BlogScreen = ({ posts, isLoading = false }: BlogScreenProps) => {
   return (
     <div>
       <div
@@ -44,6 +51,8 @@ const BlogScreen = () => {
           </PrimaryButton>
         </div>
       </div>
+
+      <BlogPostsSection posts={posts} isLoading={isLoading} />
 
       <div id="newsletter-subscribe" className="mt-16">
         <NewsletterSection />

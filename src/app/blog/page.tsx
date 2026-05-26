@@ -1,12 +1,10 @@
 import WebsiteLayout from "@/components/layouts/WebsiteLayout";
-import BlogScreen from "@/screens/blogScreen";
+import BlogPageClient from "./BlogPageClient";
 
-const ContactPage = () => {
+export default function BlogPage() {
   return (
     <WebsiteLayout>
-      <BlogScreen />
+      <BlogPageClient />
     </WebsiteLayout>
   );
-};
-
-export default ContactPage;
+}

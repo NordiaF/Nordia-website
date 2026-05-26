@@ -9,6 +9,7 @@ const routes = [
   "/events-and-outreaches",
   "/contact",
   "/blog",
+  "/blog/all-posts",
   "/power-your-productivity",
 ];
 
