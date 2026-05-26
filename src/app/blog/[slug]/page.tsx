@@ -48,7 +48,20 @@ export async function generateMetadata({
     ...metadata,
     keywords: [post.category, "Nordia Foundation blog", "community impact"],
     openGraph: {
-      ...metadata.openGraph,
+      title: seoTitle,
+      description: seoDescription,
+      url: `https://nordiafoundation.org/blog/${post.slug}`,
+      siteName: "Nordia Foundation",
+      locale: "en_US",
+      type: "article",
+      images: [
+        {
+          url: resolveBlogImage(post),
+          width: 1200,
+          height: 630,
+          alt: seoTitle,
+        },
+      ],
       publishedTime: post.publishedDate,
       section: post.category,
     },

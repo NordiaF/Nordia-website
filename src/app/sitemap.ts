@@ -23,6 +23,12 @@ function resolveLastModified(date: string) {
   return Number.isNaN(parsedDate.getTime()) ? new Date() : parsedDate;
 }
 
+function resolveChangeFrequency(
+  route: string
+): MetadataRoute.Sitemap[number]["changeFrequency"] {
+  return route === "" ? "weekly" : "monthly";
+}
+
 export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
   const lastModified = new Date();
   const posts = await getBlogPosts();
@@ -50,7 +56,7 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
     ...routes.map((route) => ({
       url: `${baseUrl}${route}`,
       lastModified,
-      changeFrequency: route === "" ? "weekly" : "monthly",
+      changeFrequency: resolveChangeFrequency(route),
       priority: route === "" ? 1 : route === "/blog" ? 0.9 : 0.8,
     })),
     ...paginatedRoutes,
