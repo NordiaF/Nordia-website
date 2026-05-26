@@ -65,7 +65,7 @@ export default function AllBlogPostsScreen({
                   <div>
                     <div className="flex flex-wrap items-center justify-between gap-3">
                       <BlogCategoryBadge category={post.category} />
-                      <p className="text-xs font-medium text-black sm:text-sm">
+                      <p className="font-primary text-xs font-medium text-black sm:text-sm">
                         {formatReadTime(post.readTime)} |{" "}
                         {formatPublishedDate(post.publishedDate)}
                       </p>
@@ -100,7 +100,7 @@ export default function AllBlogPostsScreen({
             <Link
               href={buildPageHref(Math.max(1, page - 1))}
               aria-disabled={page === 1}
-              className={`inline-flex min-w-24 items-center justify-center border px-5 py-3 text-sm font-semibold transition-colors ${
+              className={`font-primary inline-flex min-w-24 items-center justify-center border px-5 py-3 text-sm font-semibold transition-colors ${
                 page === 1
                   ? "pointer-events-none border-black/10 text-black/30"
                   : "border-[#1F2847] text-[#1F2847] hover:bg-[#1F2847] hover:text-white"
@@ -119,7 +119,7 @@ export default function AllBlogPostsScreen({
                     key={pageNumber}
                     href={buildPageHref(pageNumber)}
                     aria-current={isActive ? "page" : undefined}
-                    className={`inline-flex h-11 w-11 items-center justify-center border text-sm font-semibold transition-colors ${
+                    className={`font-primary inline-flex h-11 w-11 items-center justify-center border text-sm font-semibold transition-colors ${
                       isActive
                         ? "border-[#1F2847] bg-[#1F2847] text-white"
                         : "border-black/10 text-[#1F2847] hover:border-[#1F2847]"
@@ -134,7 +134,7 @@ export default function AllBlogPostsScreen({
             <Link
               href={buildPageHref(Math.min(totalPages, page + 1))}
               aria-disabled={page === totalPages}
-              className={`inline-flex min-w-24 items-center justify-center border px-5 py-3 text-sm font-semibold transition-colors ${
+              className={`font-primary inline-flex min-w-24 items-center justify-center border px-5 py-3 text-sm font-semibold transition-colors ${
                 page === totalPages
                   ? "pointer-events-none border-black/10 text-black/30"
                   : "border-[#1F2847] text-[#1F2847] hover:bg-[#1F2847] hover:text-white"

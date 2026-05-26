@@ -35,7 +35,7 @@ function SuggestedPostCard({ post }: { post: BlogPost }) {
 
       <div className="mt-5 flex flex-wrap items-center justify-between gap-3">
         <BlogCategoryBadge category={post.category} />
-        <p className="text-[11px] font-medium text-black/75">
+        <p className="font-primary text-[11px] font-medium text-black/75">
           {formatReadTime(post.readTime)} | {formatPublishedDate(post.publishedDate)}
         </p>
       </div>
@@ -66,14 +66,14 @@ export default function BlogPostScreen({
       <div className="mx-auto max-w-4xl px-6 pt-12">
         <Link
           href="/blog"
-          className="text-sm font-medium text-info hover:underline"
+          className="font-primary text-sm font-medium text-info hover:underline"
         >
           &larr; Back to Blog
         </Link>
 
         <div className="mt-6 flex flex-wrap items-center gap-4">
           <BlogCategoryBadge category={post.category} />
-          <p className="text-sm text-black/55">
+          <p className="font-primary text-sm text-black/55">
             {formatReadTime(post.readTime)} |{" "}
             {formatPublishedDate(post.publishedDate)}
           </p>
